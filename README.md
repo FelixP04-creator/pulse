@@ -13,7 +13,7 @@ Premium-Health-, Fitness- und Longevity-App (iOS & Android, Expo / React Native 
 | Google-Health-Client, OAuth, Token-Verschlüsselung, Mapper, Sync | implementiert und gegen simulierte API-Antworten getestet. **Nicht gegen ein echtes Konto getestet** |
 | Edge Functions (OAuth, Sync, Foto-Analyse, Coach, Export, Löschung) | geschrieben, **nicht deployt und nicht ausgeführt** |
 | Datenbank-Migration mit Row-Level Security | geschrieben, **nicht gegen eine echte Postgres-Instanz ausgeführt** |
-| Expo-App (alle Screens) | geschrieben; Logik per Typecheck gegen Platzhalter-Typen geprüft. **Noch nie gebaut oder gestartet**, UI nicht auf einem Gerät gesehen |
+| Expo-App (alle Screens) | gebaut: `npx expo export` bündelt erfolgreich für Android und iOS (Hermes-Bytecode). **Noch nie auf einem Gerät gestartet**, UI nicht auf einem Gerät gesehen |
 | Foto-Erkennung | Server-Funktion + Auswertung implementiert/getestet; **Modellaufruf nie ausgeführt** |
 | Webhooks | Endpunkt prüft nur den Authorization-Header und quittiert; **Signaturprüfung und Verarbeitung fehlen**, weil Nachrichtenformat und Schlüsselbezug in der Doku nicht belegt sind |
 
@@ -29,7 +29,7 @@ npx expo start --ios        # iOS-Simulator; auf dem iPhone: Expo Go oder Develo
 ```
 In der App „Demo-Modus starten“. Alle Werte sind dann **erfundene Beispieldaten** und überall als „Demo“ markiert. Foto-Erkennung, KI-Coach und Fitbit-Verbindung sind im Demo-Modus bewusst nicht simuliert.
 
-Die in `package.json` auf `latest` gesetzten Versionen sind Platzhalter: `expo install --fix` ersetzt sie durch kompatible. Danach `npm run typecheck`. Rechne mit kleinen Anpassungen an API-Änderungen (z. B. `expo-image-manipulator`, `expo-router`).
+Die in `package.json` gepinnten Versionen sind auf **Expo SDK 58** (React Native 0.88, React 19.3.1) abgestimmt und laufen `npx expo install --check`-rein.
 
 ## Tests
 

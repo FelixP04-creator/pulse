@@ -1,9 +1,9 @@
 import { Tabs } from 'expo-router';
 import React from 'react';
-import { Text } from 'react-native';
+import { Text, type ColorValue } from 'react-native';
 import { useTheme } from '../../src/theme/ThemeProvider';
 
-const icon = (glyph: string) => ({ color }: { color: string }) => <Text style={{ color, fontSize: 20 }} accessibilityElementsHidden>{glyph}</Text>;
+const icon = (glyph: string) => ({ color }: { color: ColorValue }) => <Text style={{ color, fontSize: 20 }} accessibilityElementsHidden>{glyph}</Text>;
 
 export default function TabsLayout() {
   const t = useTheme();

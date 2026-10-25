@@ -72,7 +72,7 @@ export function AppProvider({ children }: { children: React.ReactNode }) {
   const [loadError, setLoadError] = useState<string>();
   const [signedIn, setSignedIn] = useState(false);
   const today = localToday();
-  const saveTimer = useRef<ReturnType<typeof setTimeout>>();
+  const saveTimer = useRef<ReturnType<typeof setTimeout> | undefined>(undefined);
 
   useEffect(() => {
     (async () => {
