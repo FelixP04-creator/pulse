@@ -1,0 +1,25 @@
+{
+  "expo": {
+    "name": "PULSE",
+    "slug": "pulse",
+    "scheme": "pulse",
+    "version": "0.1.0",
+    "orientation": "portrait",
+    "userInterfaceStyle": "automatic",
+    "ios": {
+      "bundleIdentifier": "app.pulse.mobile",
+      "supportsTablet": false,
+      "infoPlist": {
+        "NSCameraUsageDescription": "PULSE nutzt die Kamera, damit du Mahlzeiten fotografieren und die Inhalte automatisch erkennen lassen kannst. Fotos werden nicht gespeichert.",
+        "NSPhotoLibraryUsageDescription": "PULSE greift nur auf Fotos zu, die du für die Mahlzeitenerkennung auswählst.",
+        "ITSAppUsesNonExemptEncryption": false
+      }
+    },
+    "android": {
+      "package": "app.pulse.mobile",
+      "permissions": ["CAMERA", "READ_MEDIA_IMAGES"]
+    },
+    "plugins": ["expo-router", "expo-secure-store", "expo-web-browser"],
+    "experiments": { "typedRoutes": false }
+  }
+}

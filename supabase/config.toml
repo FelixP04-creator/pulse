@@ -1,0 +1,9 @@
+project_id = "pulse"
+
+# OAuth-Callback und Webhook werden von Google aufgerufen (kein Nutzer-JWT) und prüfen selbst
+# signierten State bzw. Authorization-Header + Signatur.
+[functions.google-health-oauth-callback]
+verify_jwt = false
+
+[functions.google-health-webhook]
+verify_jwt = false
